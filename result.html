@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DISC Result</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app result-theme" id="result-app">
+      <header class="app__header">
+        <h1 class="brand">DISC Result</h1>
+      </header>
+
+      <main class="app__main">
+        <div class="result-grid">
+          <!-- Left profile card -->
+          <section class="card profile" id="profile">
+            <div class="profile__header">
+              <div class="profile__subtitle">Your Personality</div>
+              <h2 class="profile__title" id="type-title">—</h2>
+              <div class="profile__chip" id="type-chip">—</div>
+            </div>
+            <div class="profile__illustration" id="type-illustration" aria-hidden="true"></div>
+            <div class="profile__nickname" id="type-nickname">—</div>
+            <a class="btn btn--ghost" href="index.html" style="margin-top:8px;">Back to Test</a>
+          </section>
+
+          <!-- Right traits area -->
+          <section class="card traits" id="traits">
+            <h3 class="traits__title">Your Traits</h3>
+            <div class="traits__bars" id="traits-bars">
+              <!-- Bars built by JS -->
+            </div>
+            <aside class="traits__side" id="traits-side">
+              <div class="side-card">
+                <div class="side-card__title" id="side-title">—</div>
+                <div class="side-card__percent" id="side-percent">—</div>
+                <p class="side-card__blurb" id="side-blurb">—</p>
+              </div>
+              <h4 class="people__heading" style="margin-top:12px;">Known Personalities</h4>
+              <div class="people" id="people"></div>
+            </aside>
+          </section>
+        </div>
+      </main>
+
+      <footer class="app__footer">
+        <div class="footer-content">
+          <small>DISC Test — for personal insight. Not a diagnostic tool.</small>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Developed by</a>
+            <span class="divider">•</span>
+            <a href="https://orola-jhudel.html-5.me/" class="footer-link">Jhudel Orola</a>
+          </div>
+
+    <script src="result.js"></script>
+  </body>
+  </html>
+
+

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DISC Personality Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="header-content">
+          <h1 class="brand">DISC Personality Test</h1>
+          <p class="tagline">Discover your personality profile</p>
+        </div>
+      </header>
+
+      <main class="app__main">
+        <section class="card instructions" id="instructions">
+          <h2>Instructions</h2>
+          <ol>
+            <li>For each row, rank the four words from <strong>4</strong> (most like you) to <strong>1</strong> (least like you).</li>
+            <li>Each number (1, 2, 3, 4) can be used <strong>only once per row</strong>.</li>
+            <li>When all rows are ranked, click <strong>See My Result</strong>.</li>
+          </ol>
+        </section>
+
+        <section class="card" id="test-card">
+          <div class="card__header">
+            <h2>Rank each word in its row</h2>
+            <div class="legend">
+              <span class="legend__pill">4 = Most</span>
+              <span class="legend__pill">1 = Least</span>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="disc-table" role="table" aria-describedby="instructions">
+              <caption class="visually-hidden">DISC Ranking Table</caption>
+              <thead>
+                <tr>
+                  <th class="visually-hidden" scope="col">Directing (D)</th>
+                  <th class="visually-hidden" scope="col">Influencing (I)</th>
+                  <th class="visually-hidden" scope="col">Steady (S)</th>
+                  <th class="visually-hidden" scope="col">Cautious (C)</th>
+                </tr>
+              </thead>
+              <tbody id="disc-body">
+                <!-- Row 1 -->
+                <tr data-row="0">
+                  <td data-col="D" data-word="Directing">
+                    <div class="cell">
+                      <span class="word">Directing</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Directing in row 1" />
+                    </div>
+                  </td>
+                  <td data-col="I" data-word="Influencing">
+                    <div class="cell">
+                      <span class="word">Influencing</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Influencing in row 1" />
+                    </div>
+                  </td>
+                  <td data-col="S" data-word="Steady">
+                    <div class="cell">
+                      <span class="word">Steady</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Steady in row 1" />
+                    </div>
+                  </td>
+                  <td data-col="C" data-word="Cautious">
+                    <div class="cell">
+                      <span class="word">Cautious</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Cautious in row 1" />
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr data-row="1">
+                  <td data-col="D" data-word="Decisive">
+                    <div class="cell">
+                      <span class="word">Decisive</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Decisive in row 2" />
+                    </div>
+                  </td>
+                  <td data-col="I" data-word="Optimistic">
+                    <div class="cell">
+                      <span class="word">Optimistic</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Optimistic in row 2" />
+                    </div>
+                  </td>
+                  <td data-col="S" data-word="Patient">
+                    <div class="cell">
+                      <span class="word">Patient</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Patient in row 2" />
+                    </div>
+                  </td>
+                  <td data-col="C" data-word="Restrained">
+                    <div class="cell">
+                      <span class="word">Restrained</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Restrained in row 2" />
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr data-row="2">
+                  <td data-col="D" data-word="Daring">
+                    <div class="cell">
+                      <span class="word">Daring</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Daring in row 3" />
+                    </div>
+                  </td>
+                  <td data-col="I" data-word="Enthusiastic">
+                    <div class="cell">
+                      <span class="word">Enthusiastic</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Enthusiastic in row 3" />
+                    </div>
+                  </td>
+                  <td data-col="S" data-word="Stabilizing">
+                    <div class="cell">
+                      <span class="word">Stabilizing</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Stabilizing in row 3" />
+                    </div>
+                  </td>
+                  <td data-col="C" data-word="Analytical">
+                    <div class="cell">
+                      <span class="word">Analytical</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Analytical in row 3" />
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr data-row="3">
+                  <td data-col="D" data-word="Competitive">
+                    <div class="cell">
+                      <span class="word">Competitive</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Competitive in row 4" />
+                    </div>
+                  </td>
+                  <td data-col="I" data-word="Talkative">
+                    <div class="cell">
+                      <span class="word">Talkative</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Talkative in row 4" />
+                    </div>
+                  </td>
+                  <td data-col="S" data-word="Accommodating">
+                    <div class="cell">
+                      <span class="word">Accommodating</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Accommodating in row 4" />
+                    </div>
+                  </td>
+                  <td data-col="C" data-word="Precise">
+                    <div class="cell">
+                      <span class="word">Precise</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Precise in row 4" />
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 5 -->
+                <tr data-row="4">
+                  <td data-col="D" data-word="Forceful">
+                    <div class="cell">
+                      <span class="word">Forceful</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Forceful in row 5" />
+                    </div>
+                  </td>
+                  <td data-col="I" data-word="Charming">
+                    <div class="cell">
+                      <span class="word">Charming</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Charming in row 5" />
+                    </div>
+                  </td>
+                  <td data-col="S" data-word="Easygoing">
+                    <div class="cell">
+                      <span class="word">Easygoing</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Easygoing in row 5" />
+                    </div>
+                  </td>
+                  <td data-col="C" data-word="Curious">
+                    <div class="cell">
+                      <span class="word">Curious</span>
+                      <input class="rank-input" type="number" min="1" max="4" step="1" inputmode="numeric" pattern="[1-4]" placeholder="1–4" aria-label="Rank Curious in row 5" />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="actions">
+            <div class="progress-container">
+              <div class="progress-bar" id="progressBar"></div>
+              <span class="progress-text" id="progressText">0% complete</span>
+            </div>
+            <div class="action-buttons">
+              <button id="resetBtn" class="btn btn--ghost" type="button">
+                <i class="fas fa-redo"></i> Reset
+              </button>
+              <button id="submitBtn" class="btn" type="button" disabled>
+                <span class="btn-text">See My Result</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="card result hidden" id="result-card" aria-live="polite">
+          <div class="result__header">
+            <h2>Your DISC Type</h2>
+            <div id="score-bar" class="score-bar"></div>
+          </div>
+          <div class="result__content">
+            <div class="type-badge" id="type-badge">—</div>
+            <p class="type-desc" id="type-desc"></p>
+            <p class="type-known" id="type-known"></p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app__footer">
+        <div class="footer-content">
+          <small>DISC Test — for personal insight. Not a diagnostic tool.</small>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Developed by</a>
+            <span class="divider">•</span>
+            <a href="https://orola-jhudel.html-5.me/" class="footer-link">Jhudel Orola</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
